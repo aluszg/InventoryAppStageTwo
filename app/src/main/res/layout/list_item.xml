@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?><!-- Layout for a single list item in the list of inventories -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/activity_margin">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Name text view -->
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="ABC"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@color/editorColorPrimaryDark" />
+
+        <!-- Price text view -->
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="0"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:textColor="@color/textColor" />
+
+        <!-- Quantity text view -->
+        <TextView
+            android:id="@+id/quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="0"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:textColor="@color/textColor" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true">
+
+        <!-- Decrement button -->
+        <Button
+            android:id="@+id/menu_decrement"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginBottom="16dp"
+            android:onClick="@string/decrement"
+            android:text="-" />
+
+        <!-- Units for product price (zł) -->
+        <TextView
+            android:id="@+id/edit_product_quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:text="0"
+            android:textColor="@color/editorColorPrimaryDark"
+            android:textSize="@dimen/activity_margin" />
+
+        <!-- Increment button -->
+        <Button
+            android:id="@+id/menu_increment"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:onClick="@string/increment"
+            android:text="+" />
+    </LinearLayout>
+
+</RelativeLayout>
